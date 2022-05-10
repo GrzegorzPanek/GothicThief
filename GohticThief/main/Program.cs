@@ -77,8 +77,8 @@ namespace GohticThief
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Wprowadzono niepoprawne dane. Wybierz ponownie. ");
                     Console.Clear();
+                    Console.WriteLine("Wprowadzono niepoprawne dane. Wybierz ponownie. ");
                 }
 
             } while (user.getSelected !=0);
