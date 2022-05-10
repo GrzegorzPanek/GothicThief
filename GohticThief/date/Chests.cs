@@ -9,14 +9,12 @@ namespace GohticThief
         private String[] easyChest = new string[5];
         private String[] middleChest = new string[7];
         private String[] hardChest = new string[9];
+        private String cipher;
 
-       
-        
+
 
         public String[] getEasyChest()
         {
-            String cipher = "";
-            Random random = new Random();
 
             for (int i = 0; i < easyChest.Length; i++)
             {
@@ -39,8 +37,6 @@ namespace GohticThief
 
         public String[] getMiddleChest()
         {
-            String cipher = "";
-            Random random = new Random();
 
             for (int i = 0; i < middleChest.Length; i++)
             {
@@ -63,8 +59,6 @@ namespace GohticThief
 
         public String[] getHardChest()
         {
-            String cipher = "";
-            Random random = new Random();
 
             for (int i = 0; i < hardChest.Length; i++)
             {

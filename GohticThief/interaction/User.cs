@@ -88,7 +88,7 @@ namespace GohticThief
                     {
                         Console.WriteLine("Bład! Tracisz wytrych.\n ");
                         keys--;
-                        Console.WriteLine("Liczba pozostałych wytrychów = " + keys);
+                        Console.WriteLine("Liczba pozostałych wytrychów = " + keys + "\n");
                         setCheck = false;
                         setCounter = 0;
                         i = 0;
