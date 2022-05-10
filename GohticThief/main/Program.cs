@@ -2,7 +2,7 @@
 
 namespace GohticThief
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -19,12 +19,14 @@ namespace GohticThief
                 try
                 {
                     user.setSelected = int.Parse(Console.ReadLine());
+                    Console.Clear();
 
                     if (user.getSelected > 0 && user.getSelected < 5)
                     {
                         switch (user.getSelected)
                         {
                             case 1:
+                                Console.Clear();
                                 instruction.printInstruction();
                                 break;
 
@@ -32,6 +34,7 @@ namespace GohticThief
                                 user.keysNumber();
                                 instruction.chooseChest();
                                 int selected2 = int.Parse(Console.ReadLine());
+                                Console.Clear();
                                 if (selected2 == 1)
                                 {
                                     chest.getEasyChest();

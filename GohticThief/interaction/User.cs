@@ -58,6 +58,7 @@ namespace GohticThief
         {
             Console.WriteLine("\nUstaw liczbe wytrychów.\n");
             setKeys = int.Parse(Console.ReadLine());
+            Console.Clear();
             return getKeys;
         }
 
@@ -76,6 +77,7 @@ namespace GohticThief
                         Environment.Exit(0);
                     }
                     String input = Console.ReadLine();
+                    Console.Clear();
                     if (String.Equals(input.ToUpper(), chest[i]))
                     {
                         setCheck = true;
@@ -86,7 +88,10 @@ namespace GohticThief
                     {
                         Console.WriteLine("Bład! Tracisz wytrych.\n ");
                         keys--;
+                        Console.WriteLine("Liczba pozostałych wytrychów = " + keys);
                         setCheck = false;
+                        setCounter = 0;
+                        i = 0;
                     }
                     if(getCounter == chest.Length)
                     {
@@ -97,7 +102,7 @@ namespace GohticThief
 
                 } while (getCheck == false);
             }
-
+            
         }
     }
 }
