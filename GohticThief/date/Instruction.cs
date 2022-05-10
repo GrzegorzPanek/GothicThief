@@ -19,6 +19,7 @@ namespace GohticThief
             myStringBuilder.Append("Są 3 poziomy trudności skrzyń. Ilość wytrychów należy ustawić na poczatku gry.\nNależy wybrać która skrzynie chcemy otworzyć.\n");
             myStringBuilder.Append("Nagrodą za otwarcie jest złoto w ilosći zależnej od trudności otwieranej skrzyni.\n");
             Console.WriteLine(myStringBuilder);
+            Console.WriteLine("\n [4] Powrót do menu.");
             krecha();
         }
        

@@ -38,7 +38,6 @@ namespace GohticThief
                                 if (selected2 == 1)
                                 {
                                     chest.getEasyChest();
-                                    chest.printChest(chest.getEasyChest());
                                     Console.WriteLine("");
                                     user.play(chest.getEasyChest(), user.getKeys);
 
@@ -47,7 +46,6 @@ namespace GohticThief
                                 else if (selected2 == 2)
                                 {
                                     chest.getMiddleChest();
-                                    chest.printChest(chest.getMiddleChest());
                                     Console.WriteLine("");
                                     user.play(chest.getMiddleChest(), user.getKeys);
 
@@ -55,7 +53,6 @@ namespace GohticThief
                                 else if (selected2 == 3)
                                 {
                                     chest.getHardChest();
-                                    chest.printChest(chest.getHardChest());
                                     Console.WriteLine("");
                                     user.play(chest.getHardChest(), user.getKeys);
                                 }
@@ -81,6 +78,7 @@ namespace GohticThief
                 catch (Exception)
                 {
                     Console.WriteLine("Wprowadzono niepoprawne dane. Wybierz ponownie. ");
+                    Console.Clear();
                 }
 
             } while (user.getSelected !=0);
