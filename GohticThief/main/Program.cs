@@ -8,6 +8,7 @@ namespace GohticThief
         {
 
             Console.WriteLine("\nWitamy w grze GothicThief!\n");
+
             Chests chest = new Chests();
             User user = new User();
             Instruction instruction = new Instruction();
@@ -18,12 +19,12 @@ namespace GohticThief
             {
                 try
                 {
-                    user.setSelected = int.Parse(Console.ReadLine());
+                    chest.setSelected = int.Parse(Console.ReadLine());
                     Console.Clear();
 
-                    if (user.getSelected > 0 && user.getSelected < 5)
+                    if (chest.getSelected > 0 && chest.getSelected < 5)
                     {
-                        switch (user.getSelected)
+                        switch (chest.getSelected)
                         {
                             case 1:
                                 Console.Clear();
@@ -31,7 +32,7 @@ namespace GohticThief
                                 break;
 
                             case 2:
-                                user.keysNumber();
+                                chest.keysNumber();
                                 instruction.chooseChest();
                                 int selected2 = int.Parse(Console.ReadLine());
                                 Console.Clear();
@@ -39,7 +40,7 @@ namespace GohticThief
                                 {
                                     chest.getEasyChest();
                                     Console.WriteLine("");
-                                    user.play(chest.getEasyChest(), user.getKeys);
+                                    user.play(chest.getEasyChest(), chest.getKeys);
 
 
                                 }
@@ -47,14 +48,14 @@ namespace GohticThief
                                 {
                                     chest.getMiddleChest();
                                     Console.WriteLine("");
-                                    user.play(chest.getMiddleChest(), user.getKeys);
+                                    user.play(chest.getMiddleChest(), chest.getKeys);
 
                                 }
                                 else if (selected2 == 3)
                                 {
                                     chest.getHardChest();
                                     Console.WriteLine("");
-                                    user.play(chest.getHardChest(), user.getKeys);
+                                    user.play(chest.getHardChest(), chest.getKeys);
                                 }
 
                                 break;
@@ -81,7 +82,7 @@ namespace GohticThief
                     Console.WriteLine("Wprowadzono niepoprawne dane. Wybierz ponownie. ");
                 }
 
-            } while (user.getSelected !=0);
+            } while (chest.getSelected !=0);
 
         }
     }

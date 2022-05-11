@@ -6,12 +6,60 @@ namespace GohticThief
     {
         Random random = new Random();
 
+        private int numberOfKeys;
+        private int selected;
+        private bool check;
+        private int counter;
+
         private String[] easyChest = new string[5];
         private String[] middleChest = new string[7];
         private String[] hardChest = new string[9];
         private String cipher;
 
+        public int setCounter
+        {
+            set { counter = value; }
+        }
 
+        public int getCounter
+        { get { return counter; } }
+
+        public bool setCheck
+        {
+            set { check = value; }
+        }
+
+        public bool getCheck
+        {
+            get { return check; }
+        }
+
+        public int setKeys
+        {
+            set { numberOfKeys = value; }
+        }
+
+        public int getKeys
+        { get { return numberOfKeys; } }
+
+        public int getSelected
+        {
+            get { return selected; }
+        }
+
+        public int setSelected
+        {
+            set { selected = value; }
+        }
+
+
+        public int keysNumber()
+        {
+            Console.WriteLine("\nUstaw liczbe wytrychów.\n");
+            numberOfKeys = int.Parse(Console.ReadLine());
+            Console.Clear();
+            return numberOfKeys;
+        }
 
         public String[] getEasyChest()
         {
